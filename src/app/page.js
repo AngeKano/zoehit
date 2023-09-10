@@ -154,7 +154,7 @@ export default function Home() {
             </button>
           </div>
           {/* Formulare  */}
-          <form onSubmit={() => handleConnexion()} className="flex flex-col">
+          <div className="flex flex-col">
             <label class="block text-gray-700 text-sm font-bold mb-2">
               Email
             </label>
@@ -188,15 +188,14 @@ export default function Home() {
               className="bg-[#7473E1] hover:bg-[#8786F6] text-white font-bold py-3 px-4 rounded
             focus:outline-none focus:shadow-outline mb-4 w-full 
             text-center"
-              // onClick={() => {
-              //   handleConnexion();
-              // }}
-              // form="form1"
+              onClick={() => {
+                handleConnexion();
+              }}
               type="submit"
             >
               Connexion
             </button>
-          </form>
+          </div>
 
           <span className="text-sm text-gray-600 text-center">
             Creez vous un compte restaurant,{" "}
