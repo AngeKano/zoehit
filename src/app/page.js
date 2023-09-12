@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import {  useState } from "react";
+import { useState } from "react";
 import axios from "./api/axios";
 
 export default function Home() {
@@ -36,7 +36,7 @@ export default function Home() {
     }
   };
 
-  //*Inscription
+  //Inscription
 
   const [firstName, setNom] = useState("");
   const [lastName, setPrenom] = useState("");
@@ -153,36 +153,41 @@ export default function Home() {
             </button>
           </div>
           {/* Formulare  */}
-          <div className="flex flex-col">
-            <label class="block text-gray-700 text-sm font-bold mb-2">
-              Email
-            </label>
-            <input
-              class="shadow appearance-none border rounded w-full py-3 px-4 
+          <div className="flex flex-col gap-5">
+            <div>
+              <label class="block text-gray-700 text-sm font-bold mb-2">
+                Email
+              </label>
+              <input
+                class="shadow appearance-none border rounded w-full py-3 px-4 
               text-gray-700 leading-tight focus:outline-none focus:shadow-outline
               focus:border-[#7473E1]
               "
-              type="email"
-              placeholder=""
-              value={emailUser}
-              onChange={(e) => {
-                setEmailUser(e.target.value);
-              }}
-            />
-            <label class="flex flex-row justify-between text-gray-700 text-sm font-bold mb-2">
-              Mot de passe
-              <span className="underline text-sm ">oubliez?</span>
-            </label>
+                type="email"
+                placeholder=""
+                value={emailUser}
+                onChange={(e) => {
+                  setEmailUser(e.target.value);
+                }}
+              />
+            </div>
+            <div>
+              <label class="flex flex-row justify-between text-gray-700 text-sm font-bold mb-2">
+                Mot de passe
+                <span className="underline text-sm ">oubliez?</span>
+              </label>
 
-            <input
-              class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              type="password"
-              placeholder=""
-              value={pwdUser}
-              onChange={(e) => {
-                setPwdUser(e.target.value);
-              }}
-            />
+              <input
+                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="password"
+                placeholder=""
+                value={pwdUser}
+                onChange={(e) => {
+                  setPwdUser(e.target.value);
+                }}
+              />
+            </div>
+
             <button
               className="bg-[#7473E1] hover:bg-[#8786F6] text-white font-bold py-3 px-4 rounded
             focus:outline-none focus:shadow-outline mb-4 w-full 
