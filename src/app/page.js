@@ -323,6 +323,23 @@ export default function Home() {
             />
           </div>
           <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2">
+              Numero
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-3 px-4 
+              text-gray-700 leading-tight focus:outline-none focus:shadow-outline
+              focus:border-[#7473E1]
+              "
+              type="number"
+              value={email}
+              placeholder=""
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+          </div>
+          <div class="mb-4">
             <div className="flex flex-row justify-between">
               <label class="block text-gray-700 text-sm font-bold mb-2">
                 Mot de passe
