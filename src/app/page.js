@@ -8,7 +8,7 @@ export default function Home() {
   const router = useRouter();
 
   const [connexion, setConnexion] = useState(true);
-  const [restauranat, setRestaurant] = useState(true);
+  const [restaurant, setRestaurant] = useState(true);
   const [client, setClient] = useState(false);
   const [admin, setAdmin] = useState(false);
 
@@ -73,7 +73,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-row overflow-hidden">
-      <section className="flex-1 bg-[#9C9CF4] h-screen relative">
+      <section className="flex-1 bg-hero-pattern bg-cover h-screen relative">
         <Image
           src="/images/bgfood.png"
           width={800}
@@ -114,7 +114,7 @@ export default function Home() {
                 setAdmin(false);
               }}
               className={
-                restauranat
+                restaurant
                   ? "bg-[#7473E1] text-white rounded-full px-4 py-3 cursor-pointer"
                   : "border-[#8786F6] border text-black rounded-full px-4 py-3 cursor-pointer"
               }
