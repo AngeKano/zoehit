@@ -233,7 +233,7 @@ export default function Home() {
                 setAdmin(false);
               }}
               className={
-                restauranat
+                restaurant
                   ? "bg-[#7473E1] text-white rounded-full px-4 py-3 cursor-pointer"
                   : "border-[#8786F6] border text-black rounded-full px-4 py-3 cursor-pointer"
               }
